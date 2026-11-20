@@ -1,0 +1,26 @@
+/* GrokForum watch directory. No external fonts, no scripts, no trackers. */
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55;color:#14202b;background:#f6f8fa}
+a{color:#0b4f8a}a:focus-visible{outline:3px solid #1b5fd1;outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:.5rem 1rem;z-index:10}.skip:focus{left:.5rem}
+.draft{background:#7a1f0a;color:#fff;font-size:.95rem}.draft p{max-width:980px;margin:0 auto;padding:.55rem 1rem}.draft a{color:#fff;text-decoration:underline}
+.draft strong{letter-spacing:.06em}
+main{max-width:980px;margin:0 auto;padding:1rem 1rem 2.2rem;background:#fff}
+h1{font-size:1.7rem;line-height:1.25;margin:.4rem 0 .6rem}
+h2{font-size:1.15rem;margin:0 0 .35rem;border:0;padding:0}
+.lede{font-size:1.05rem}
+footer{max-width:980px;margin:0 auto;padding:1rem;color:#566370;font-size:.88rem}
+.sites{list-style:none;padding:0;margin:1.2rem 0 0}
+.sites li{padding:1rem 0;border-bottom:1px solid #e3e8ee}
+.sites li:first-child{border-top:1px solid #e3e8ee}
+.badge{display:inline-block;font-size:.75rem;font-weight:650;padding:.08rem .5rem;border-radius:.6rem;border:1px solid #7a1f0a;color:#7a1f0a;margin-left:.4rem;vertical-align:middle;white-space:nowrap}
+.site-url{font-size:.88rem;color:#3d4a57;margin:.15rem 0}
+.sites p{margin:.35rem 0 0}
+@media (prefers-color-scheme:dark){
+body{color:#e6edf3;background:#0f161d}main{background:#16202a}a{color:#8cc4ff}footer{color:#9aa7b4}
+.sites li{border-bottom-color:#2a3846}.sites li:first-child{border-top-color:#2a3846}
+.badge{color:#e08a6a;border-color:#e08a6a}.site-url{color:#b4c0cc}
+}
+.repos{font-size:.9rem;margin:.4rem 0 0}
+.repos a{margin-right:.15rem}
+.kind{display:inline-block;font-size:.72rem;font-weight:650;padding:.02rem .35rem;border-radius:.5rem;border:1px solid #566370;color:#566370;margin:0 .55rem 0 .15rem;white-space:nowrap}
+@media (prefers-color-scheme:dark){.kind{color:#9aa7b4;border-color:#9aa7b4}}

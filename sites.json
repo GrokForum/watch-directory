@@ -1,0 +1,70 @@
+{
+  "generated_from": "Live pages read on 20 November 2026 (Africa/Johannesburg) via https to 185.199.108.153. Status reflects each site's own DRAFT banner and robots/noindex settings at that check. Repos are public GrokForum repositories only.",
+  "sites": [
+    {
+      "id": "crimewatch",
+      "name": "CrimeWatch SA",
+      "url": "https://crimewatch.grokforum.site/",
+      "description": "Official SAPS crime statistics for South Africa, with civil-society figures shown separately and labelled.",
+      "status": "Draft, indexable",
+      "repos": [
+        {"name": "crimewatch-site", "url": "https://github.com/GrokForum/crimewatch-site", "kind": "site"}
+      ]
+    },
+    {
+      "id": "publicfunds",
+      "name": "PublicFunds SA",
+      "url": "https://publicfunds.grokforum.site/",
+      "description": "Budgets, spending, audit results and tenders for South African municipalities and national departments, from official open data, with the gaps shown.",
+      "status": "Draft, not indexed",
+      "repos": [
+        {"name": "publicfunds-sa", "url": "https://github.com/GrokForum/publicfunds-sa", "kind": "code"},
+        {"name": "publicfunds", "url": "https://github.com/GrokForum/publicfunds", "kind": "code"},
+        {"name": "publicfunds-site", "url": "https://github.com/GrokForum/publicfunds-site", "kind": "site"}
+      ]
+    },
+    {
+      "id": "mediawatch",
+      "name": "MediaWatch SA",
+      "url": "https://mediawatch.grokforum.site/",
+      "description": "A pilot register of bias for or against named actors in South African media, judged only on free public content.",
+      "status": "Draft (pilot), not indexed",
+      "repos": [
+        {"name": "mediawatch-sa", "url": "https://github.com/GrokForum/mediawatch-sa", "kind": "code"},
+        {"name": "mediawatch", "url": "https://github.com/GrokForum/mediawatch", "kind": "code"}
+      ]
+    },
+    {
+      "id": "politicianwatch",
+      "name": "PoliticianWatch SA",
+      "url": "https://politicianwatch.grokforum.site/",
+      "description": "Neutral, sourced public profiles of South Africa's elected representatives, starting with City of Johannesburg councillors.",
+      "status": "Draft, coming soon, not indexed",
+      "repos": [
+        {"name": "politicianwatch", "url": "https://github.com/GrokForum/politicianwatch", "kind": "code"},
+        {"name": "politicianwatch-site", "url": "https://github.com/GrokForum/politicianwatch-site", "kind": "site"}
+      ]
+    },
+    {
+      "id": "tenderwatch",
+      "name": "TenderWatch SA",
+      "url": "https://tenderwatch.grokforum.site/",
+      "description": "A sourced register of South African government tender awards, in this draft covering the City of Cape Town.",
+      "status": "Draft, not indexed",
+      "repos": [
+        {"name": "tenderwatch", "url": "https://github.com/GrokForum/tenderwatch", "kind": "code"},
+        {"name": "tenderwatch-site", "url": "https://github.com/GrokForum/tenderwatch-site", "kind": "site"}
+      ]
+    },
+    {
+      "id": "watch-directory",
+      "name": "Watch directory",
+      "url": "https://watch.grokforum.site/",
+      "description": "This page: a directory of the watch sites and their public repositories.",
+      "status": "Draft, indexable",
+      "repos": [
+        {"name": "watch-directory", "url": "https://github.com/GrokForum/watch-directory", "kind": "new repo"}
+      ]
+    }
+  ]
+}
