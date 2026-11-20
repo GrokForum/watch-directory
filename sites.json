@@ -1,5 +1,5 @@
 {
-  "generated_from": "Live pages read on 20 November 2026 (Africa/Johannesburg) via https to 185.199.108.153. Status reflects each site's own DRAFT banner and robots/noindex settings at that check. Repos are public GrokForum repositories only.",
+  "generated_from": "Live pages and repos checked on 20 November 2026 (Africa/Johannesburg). Status reflects each site's own DRAFT banner and robots/noindex settings at that check. Only public GrokForum repositories with working code or site content are listed.",
   "sites": [
     {
       "id": "crimewatch",
@@ -8,6 +8,11 @@
       "description": "Official SAPS crime statistics for South Africa, with civil-society figures shown separately and labelled.",
       "status": "Draft, indexable",
       "repos": [
+        {
+          "name": "crimewatch-sa",
+          "url": "https://github.com/GrokForum/crimewatch-sa",
+          "kind": "code"
+        },
         {
           "name": "crimewatch-site",
           "url": "https://github.com/GrokForum/crimewatch-site",
@@ -29,11 +34,6 @@
           "kind": "code"
         },
         {
-          "name": "publicfunds",
-          "url": "https://github.com/GrokForum/publicfunds",
-          "kind": "code"
-        },
-        {
           "name": "publicfunds-site",
           "url": "https://github.com/GrokForum/publicfunds-site",
           "kind": "site"
@@ -52,11 +52,6 @@
           "name": "mediawatch-sa",
           "url": "https://github.com/GrokForum/mediawatch-sa",
           "kind": "code"
-        },
-        {
-          "name": "mediawatch",
-          "url": "https://github.com/GrokForum/mediawatch",
-          "kind": "code"
         }
       ],
       "path": "/mediawatch/"
@@ -66,11 +61,11 @@
       "name": "PoliticianWatch SA",
       "url": "https://politicianwatch.grokforum.site/",
       "description": "Neutral, sourced public profiles of South Africa's elected representatives, starting with City of Johannesburg councillors.",
-      "status": "Draft, coming soon, not indexed",
+      "status": "Draft, 24 City of Johannesburg councillor profiles live, not indexed",
       "repos": [
         {
-          "name": "politicianwatch",
-          "url": "https://github.com/GrokForum/politicianwatch",
+          "name": "politicianwatch-sa",
+          "url": "https://github.com/GrokForum/politicianwatch-sa",
           "kind": "code"
         },
         {
@@ -89,11 +84,6 @@
       "status": "Draft, not indexed",
       "repos": [
         {
-          "name": "tenderwatch",
-          "url": "https://github.com/GrokForum/tenderwatch",
-          "kind": "code"
-        },
-        {
           "name": "tenderwatch-site",
           "url": "https://github.com/GrokForum/tenderwatch-site",
           "kind": "site"
@@ -111,7 +101,7 @@
         {
           "name": "watch-directory",
           "url": "https://github.com/GrokForum/watch-directory",
-          "kind": "new repo"
+          "kind": "site"
         }
       ],
       "path": "/"
