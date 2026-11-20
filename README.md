@@ -11,9 +11,10 @@ The list is driven by a single data file, `sites.json`. The published page is
 plain HTML, generated at build time, so the site has no JavaScript dependency.
 
 1. Edit `sites.json`. Add or change one object in the `sites` array, with
-   `id`, `name`, `url`, `description` (one neutral line), `status`, and a
+   `id`, `name`, `url`, `path`, `description` (one neutral line), `status`, and a
    `repos` array of public GitHub links (`name`, `url`, `kind`). Use `kind`
    `code`, `site`, or `new repo`. Never add a private repository.
+   The landing intro is the `intro` field at the top of `sites.json`.
 2. Run `python3 build.py` from this directory. That rewrites `index.html`
    (and `404.html`) from the data file.
 3. Commit both `sites.json` and the generated HTML.
@@ -31,3 +32,15 @@ to `sitemap.xml`.
 
 The repository `CNAME` file is `watch.grokforum.site`. DNS for that name is
 set separately and is not managed from this repo.
+
+## Later: serving the projects from this host
+
+This site is currently a directory of links. The planned end state is that
+`watch.grokforum.site` serves the projects themselves, from fresh, clean
+public repositories, once each project has passed its gate.
+
+The reserved path for each project is the `path` field in `sites.json`, for
+example `/crimewatch/`, `/publicfunds/`, `/mediawatch/`, `/politicianwatch/`
+and `/tenderwatch/`. The landing page stays at `/`. Those project folders
+are not built yet. When a project is ready, point it at its reserved path
+rather than only linking out to a separate host.
