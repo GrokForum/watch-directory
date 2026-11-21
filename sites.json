@@ -1,12 +1,12 @@
 {
-  "generated_from": "Live pages and repos checked on 20 November 2026 (Africa/Johannesburg). Status reflects each site's own DRAFT banner and robots/noindex settings at that check. Only public GrokForum repositories with working code or site content are listed.",
+  "generated_from": "Live pages and repos checked on 21 November 2026 (Africa/Johannesburg). Status reflects each site's own DRAFT banner and robots/noindex settings at that check, and the PoliticianWatch profile count on main after PR #13. Only public GrokForum repositories with working code or site content are listed.",
   "sites": [
     {
       "id": "crimewatch",
       "name": "CrimeWatch SA",
       "url": "https://crimewatch.grokforum.site/",
       "description": "Official SAPS crime statistics for South Africa, with civil-society figures shown separately and labelled.",
-      "status": "Draft, indexable",
+      "status": "Draft, live, indexable",
       "repos": [
         {
           "name": "crimewatch-sa",
@@ -61,7 +61,7 @@
       "name": "PoliticianWatch SA",
       "url": "https://politicianwatch.grokforum.site/",
       "description": "Neutral, sourced public profiles of South Africa's elected representatives, starting with City of Johannesburg councillors.",
-      "status": "Draft, 24 City of Johannesburg councillor profiles live, not indexed",
+      "status": "Draft, 269 City of Johannesburg councillor profiles, not indexed",
       "repos": [
         {
           "name": "politicianwatch-sa",
