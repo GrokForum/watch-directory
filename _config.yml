@@ -1,5 +1,6 @@
-# Keep the repo README off the published site.
+# Keep the repo README, build files and docs/ off the published site.
 exclude:
   - README.md
   - build.py
   - sites.json
+  - docs
