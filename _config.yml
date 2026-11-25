@@ -1,5 +1,14 @@
-# Keep the repo README off the published site.
+# Keep the repo README, build files and docs/ off the published site.
 exclude:
   - README.md
   - build.py
   - sites.json
+  - docs
+  # Jekyll default excludes, kept explicit: on Jekyll 3 (GitHub Pages) a custom list replaces the defaults.
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
