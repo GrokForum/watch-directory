@@ -1,6 +1,6 @@
 # GrokForum watchers: Build handoff pack
 
-Version: 1, 25 Nov 2026 (SAST). Status: DRAFT, proposed in a pull request on watch-directory.
+Version: 1, 25 Nov 2026 (SAST). Status: DRAFT. Changes to this doc go through a pull request on watch-directory.
 Audience: the Build seat. Author: the project lead.
 Public-safe: no keys, tokens, personal email addresses or private-person data. Role names only.
 
@@ -11,13 +11,13 @@ keeps GitHub repo ownership: two reviewers check the code, and the project lead 
 All listed repos are public, so code can move freely between seats as public branches and PRs.
 
 Plain rule set in one line: Build branches and opens PRs; reviewers PASS the exact head;
-the owner (CAB) gives a GO where needed; the project lead squash-merges under the repo's publisher identity.
+the owner (CAB) gives a GO when the CAB approval rule in section 3 requires it; the project lead merges by local squash under the repo's publisher identity.
 
-## 1. Repos and status (read 25 Nov 2026, ~17:10 SAST)
+## 1. Repos and status (re-verified against live heads 25 Nov 2026, 17:50 SAST)
 
 All repos below are under github.com/GrokForum and are PUBLIC unless noted. SHAs are 8-hex prefixes of `main`.
 
-| Repo | Role | main | Open PRs | Open RFC / work |
+| Repo | Role | main | Open PRs (25 Nov 2026, 17:50 SAST) | Open RFC / work |
 |---|---|---|---|---|
 | publicfunds-site | Live PublicFunds site (publicfunds.grokforum.site), masked seed, DRAFT/noindex | 8346b2de | none | Receives the nightly publish after the cutover (CHG-2026-070/077) |
 | publicfunds-sa | OLD data repo. Being retired: archive + private (owner GO 25 Nov). **Build must not use, fork, clone or cite it.** Its history holds unmasked data. | 6db0ab86 | #11 draft, #23 draft, #24, #25, #26 (all frozen; content moves to publicfunds-data) | Option B scrub RFC (below) |
@@ -25,11 +25,11 @@ All repos below are under github.com/GrokForum and are PUBLIC unless noted. SHAs
 | tenderwatch-sa | TenderWatch pipeline (Cape Town awards, eTenders) | 1f234a24 | none | CHG-TW-015 SA-ID scan gap (audit 845); STATUS/CHG-TW-010 hold count drift; national + provincial awards (needed for BEE matching) |
 | tenderwatch-site | TenderWatch DRAFT register site | 14270cf5 (19 Nov tree) | none | Rebuild from current tenderwatch-sa when the hold count is fixed |
 | mediawatch-sa | MediaWatch pipeline AND live site source (there is no mediawatch-site repo; it is 404) | 14f60a7c | #11 draft (CHG-MW-010 phase-2 trio, head 53508588); #10 draft (RFC-CHG-MW-011 Politicsweb, head b30a8e36) | docs/STATUS.md still describes the privacy work as unreleased, which is stale |
-| politicianwatch-sa | PoliticianWatch pipeline (Joburg 2026 council profiles) | 72d8f763 | none | CHG-PW-017 national watch-list intake (local, being reworked to Design B: names private, only schema/counts/sources public); MP and councillor pay build (Joburg first, Gazette 55749) per CHG-PW-015/016 |
+| politicianwatch-sa | PoliticianWatch pipeline (Joburg 2026 council profiles) | a365913e | none | CHG-PW-017 national watch-list intake RFC merged via PR #17 on 25 Nov 2026 (Design B: names stay private; only schema, counts and sources are public); MP and councillor pay build (Joburg first, Gazette 55749) per CHG-PW-015/016 |
 | politicianwatch-site | PoliticianWatch DRAFT site | baf3cec7 | none | BEE elites page stays OFF until each entry passes checks (owner) |
 | crimewatch-sa | CrimeWatch pipeline + site generator | 1964ce21 | #3 draft (BAU site gate: nested entities, zero-width chars, head abedbfbd) | RFC-005 daily sweeps page (local branch, waits for #3); STATUS says RFC-003 not merged and publishing off (stale) |
 | crimewatch-site | CrimeWatch live site (crimewatch.grokforum.site) | cc710bbd | none | Gets the RFC-005 page after GO |
-| watch-directory | watch.grokforum.site, the directory of watchers | 503aa860 | none | Profile count and links refresh as watchers change |
+| watch-directory | watch.grokforum.site, the directory of watchers | 503aa860 | #1 | Profile count and links refresh as watchers change |
 
 Empty public shells (not products, do not build on them): mediawatch, politicianwatch, publicfunds, tenderwatch.
 Private repositories are out of scope for Build.
@@ -47,7 +47,7 @@ Private repositories are out of scope for Build.
    Current identities on `main` (name, then the domain of its noreply address; copy the exact address from the latest commit on the PR base):
    - publicfunds-site / publicfunds-data: `PublicFunds publisher`, noreply address at `publicfunds.grokforum.site`
    - tenderwatch-sa, tenderwatch-site: `TenderWatch publisher`, noreply address at `grokforum.site`
-   - mediawatch-sa: `MediaWatch publisher`, noreply address at `mediawatch.grokforum.site`
+   - mediawatch-sa: copy the exact identity from the PR base
    - politicianwatch-sa / -site: `PoliticianWatch publisher` (noreply; the address is being unified, use the one on the PR base until told)
    - crimewatch-sa / -site: `CrimeWatch SA publisher`, noreply address at `grokforum.site`
    - watch-directory: `GrokForum watch publisher`, noreply address at `grokforum.site`
@@ -68,6 +68,9 @@ Private repositories are out of scope for Build.
    (for example "a farmer and his wife"); every fact has a reference; every public page carries the disclaimer
    "We are not responsible for anything published by anyone else, including personal information."
    Officials, police, media accounts and public figures in their public role may be named.
+   Owner rule (25 Nov 2026) on what counts as a leak: it is only our leak if data entrusted to us is exposed by us.
+   Personal data taken from public sources is public data. We still mask it with care, but a masking gap in that data
+   is a quality fix that goes through normal review (an RFC and a PR), not an incident.
 7. **DRAFT and noindex.** Keep the visible DRAFT banner, `noindex` and `robots.txt Disallow: /` exactly as each repo has
    them now. Do not change indexing on any site without an RFC and an owner GO (CrimeWatch's opt-in flags stay as built).
 8. **No paywalls.** Do not cite or fetch paywalled or premium articles. Free, public sources only.
@@ -121,5 +124,10 @@ The project lead confirms each item has its RFC number and scope before Build st
 3. The project lead fetches that exact head, runs the tests, and sends it to Reviewer A and Reviewer B.
 4. Findings come back as PR review comments (public) and a door note. Build pushes a fix commit to the fork's PR branch and
    sends the new head the same way. Each new head restarts both reviews.
-5. Two plain PASSes on one head, then the owner's GO where needed, then the project lead merges and sends a `done` note
+5. Two plain PASSes on one head, then the owner's GO when the CAB approval rule in section 3 requires it, then the project lead merges and sends a `done` note
    with the merge sha.
+
+## 6. Known gaps
+
+- No CI check confirms that `docs/` stays off watch.grokforum.site. The only control is the `docs` entry in
+  `_config.yml` `exclude`. Anyone changing `_config.yml` must keep that entry and check a local Jekyll build before review.
