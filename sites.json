@@ -1,12 +1,12 @@
 {
-  "generated_from": "Live pages and repos checked on 21 November 2026 (Africa/Johannesburg). Status reflects each site's own DRAFT banner and robots/noindex settings at that check, and the PoliticianWatch profile count on main after PR #13. Only public GrokForum repositories with working code or site content are listed.",
+  "generated_from": "Live pages and repos checked on 27 November 2026 (Africa/Johannesburg). Status reflects each site's own DRAFT banner and robots/noindex settings at that check, and the PoliticianWatch profile count on main after PR #13. Only public GrokForum repositories with working code or site content are listed.",
   "sites": [
     {
       "id": "crimewatch",
       "name": "CrimeWatch SA",
       "url": "https://crimewatch.grokforum.site/",
       "description": "Official SAPS crime statistics for South Africa, with civil-society figures shown separately and labelled.",
-      "status": "Draft, live, indexable",
+      "status": "Draft, live, not indexed",
       "repos": [
         {
           "name": "crimewatch-sa",
@@ -28,11 +28,6 @@
       "description": "Budgets, spending, audit results and tenders for South African municipalities and national departments, from official open data, with the gaps shown.",
       "status": "Draft, not indexed",
       "repos": [
-        {
-          "name": "publicfunds-sa",
-          "url": "https://github.com/GrokForum/publicfunds-sa",
-          "kind": "code"
-        },
         {
           "name": "publicfunds-site",
           "url": "https://github.com/GrokForum/publicfunds-site",
@@ -84,6 +79,11 @@
       "status": "Draft, not indexed",
       "repos": [
         {
+          "name": "tenderwatch-sa",
+          "url": "https://github.com/GrokForum/tenderwatch-sa",
+          "kind": "code"
+        },
+        {
           "name": "tenderwatch-site",
           "url": "https://github.com/GrokForum/tenderwatch-site",
           "kind": "site"
@@ -96,7 +96,7 @@
       "name": "Watch directory",
       "url": "https://watch.grokforum.site/",
       "description": "This page: a directory of the watch sites and their public repositories.",
-      "status": "Draft, indexable",
+      "status": "Draft, not indexed",
       "repos": [
         {
           "name": "watch-directory",
