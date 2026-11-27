@@ -36,6 +36,7 @@ def head(title: str, path: str, description: str) -> str:
 <meta name="description" content="{esc(description)}">
 <meta http-equiv="Content-Security-Policy" content="{CSP}">
 <meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css">
 <title>DRAFT · {esc(title)}</title>

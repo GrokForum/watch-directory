@@ -25,8 +25,9 @@ top of the main area marks that file as built from `sites.json`.
 ## Draft and indexing
 
 Every page carries a DRAFT banner, in the same style as the other draft watch
-sites. The directory is indexable: `robots.txt` allows all crawlers and points
-to `sitemap.xml`.
+sites. Search indexing is off until the owner clears it: `robots.txt` is
+`Disallow: /` and every page carries `noindex, nofollow`. `sitemap.xml` is kept
+but no longer referenced from `robots.txt`.
 
 ## Custom domain
 
